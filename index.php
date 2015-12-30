@@ -103,8 +103,7 @@ if(!empty($_POST['pilih_zone']))
         echo "
         <tr>
     	<th>{$title_edit} :</th><td>{$value}</td>
-    	</tr>
-    	<tr>";
+    	</tr>";
     }
 
     echo "</table>";
