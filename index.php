@@ -16,11 +16,8 @@ Sensei : Mohd Shahril
 function fetch_select(val)
 {
    $.ajax({
-     type: 'post',
-     url: 'fetch_data.php',
-     data: {
-       get_option:val
-     },
+     type: 'get',
+     url: 'fetch_data.php?get_option='.concat(val),
      success: function (response) {
        document.getElementById("pilih_zone").innerHTML=response;
      }
