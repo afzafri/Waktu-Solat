@@ -10,8 +10,6 @@ $opts = array(
 
 $a = file_get_contents("http://ijat.my/e-solat-xmljsonp-api", false, stream_context_create($opts));
 $b = file_get_contents("http://solat.io/");
-
-var_dump($a);
 preg_match_all('#([A-Z1-9][^ ]*) (.*) -- (.[^\<&"\n]*)#', $a, $out);
 
 $populate = array();
