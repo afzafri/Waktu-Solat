@@ -2,7 +2,9 @@
 
 Display Waktu Solat for all countries in Malaysia
 
-1. Created By : Afif Zafri
+1. Created By : 
+  --Afif Zafri (1st version)
+  --Mohd Shahril (MAJOR CODE IMPROVEMENT)
 2. Date : 30/12/2015
 3. Contact Me : http://fb.me/afzafri
 
