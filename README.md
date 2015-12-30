@@ -9,6 +9,7 @@ Display Waktu Solat for all countries in Malaysia
 ## Installation
 
 Drop all files into your server
+Open updatezon.php once to update your zon.json to latest version
 
 ## Usage
 
