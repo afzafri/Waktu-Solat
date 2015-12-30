@@ -47,22 +47,22 @@ table, th, td {
 <!-- pilih negeri -->
 <select name='pilih_negeri' onchange="fetch_select(this.value);">
 <option value=''>Pilih Negeri</option>
-<option value="jhr">Johor</option>
-<option value="kdh">Kedah</option>
-<option value="ktn">Kelantan</option>
-<option value="kl">Kuala Lumpur</option>
-<option value="wly">Labuan</option>
-<option value="mlk">Melaka</option>
-<option value="ngs">Negeri Sembilan</option>
-<option value="phg">Pahang</option>
-<option value="prk">Perak</option>
-<option value="pls">Perlis</option>
-<option value="png">Pulau Pinang</option>
-<option value="ptj">Putrajaya</option>
-<option value="sbh">Sabah</option>
-<option value="swk">Serawak</option>
-<option value="sgr">Selangor</option>
-<option value="trg">Terengganu</option>
+<option value="Johor">Johor</option>
+<option value="Kedah">Kedah</option>
+<option value="Kelantan">Kelantan</option>
+<option value="Kuala Lumpur">Kuala Lumpur</option>
+<option value="Labuan">Labuan</option>
+<option value="Melaka">Melaka</option>
+<option value="Negeri Sembilan">Negeri Sembilan</option>
+<option value="Pahang">Pahang</option>
+<option value="Perak">Perak</option>
+<option value="Perlis">Perlis</option>
+<option value="Pulau Pinang">Pulau Pinang</option>
+<option value="Putrajaya">Putrajaya</option>
+<option value="Sabah">Sabah</option>
+<option value="Serawak">Serawak</option>
+<option value="Selangor">Selangor</option>
+<option value="Terengganu">Terengganu</option>
 </select>
 
 <!-- pilih zone -->
