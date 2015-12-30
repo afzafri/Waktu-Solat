@@ -20,6 +20,10 @@ for($i = 0; $i < count($out[0]); ++$i) {
     }
 }
 
-file_put_contents("zone.json", json_encode($populate));
+if(file_put_contents("./zone.json", json_encode($populate)) != FALSE) {
+    echo "zone.json updated!";
+} else {
+    echo "zone.json creation failed!\ncheck ur server permission and log";
+}
 
 ?>
