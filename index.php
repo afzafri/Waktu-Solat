@@ -11,7 +11,7 @@ Sensei : Mohd Shahril
 <title>Waktu Solat</title>
 
 <!-- function ajax for dropdown*/ -->
-<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript">
 function fetch_select(val)
 {
@@ -22,7 +22,7 @@ function fetch_select(val)
        get_option:val
      },
      success: function (response) {
-       document.getElementById("pilih_zone").innerHTML=response; 
+       document.getElementById("pilih_zone").innerHTML=response;
      }
    });
 }
@@ -81,7 +81,7 @@ if(isset($_POST['pilih_zone']))
 {
 	//dapatkan pilihan zone
 	$option = $_POST['pilih_zone'];
-	
+
 	//dapatkan data JSON dari API solat.io
 	//variable $option untuk code zone
 	$data = file_get_contents("http://solat.io/api/my/$option");
@@ -99,7 +99,7 @@ if(isset($_POST['pilih_zone']))
 	$waktu_isyak = $arr['waktu_isyak'];
 	$zone = $arr['zone'];
 	$date = $arr['date'];
-	
+
 	//strtotime() akan convert nilai String ke bentuk Time, supaya dapat guna
 	//function date()
 	//function date() untuk convert 24 hour to 12 hour, dan display am/pm
@@ -110,18 +110,18 @@ if(isset($_POST['pilih_zone']))
 	$asar = date('h:i', strtotime($waktu_asar));
 	$maghrib = date('h:i', strtotime($waktu_maghrib));
 	$isyak = date('h:i', strtotime($waktu_isyak));
-	
+
 	//display mcm biasa, pakai HTML ja, nak bagi cantik pun edit sini ja.
 	//contoh, $waktu_imsak. tu variable yang ada isi array tadi.
 
 	echo "
-	
+
 	<table>
 	<tr>
 	<th>Imsak :</th><td>$imsak am</td>
 	</tr>
 	<tr>
-	<th>Subuh :</th><td>$subuh am</td>  
+	<th>Subuh :</th><td>$subuh am</td>
 	</tr>
 	<tr>
 	<th>Syuruk :</th><td>$syuruk am</td>
@@ -145,7 +145,7 @@ if(isset($_POST['pilih_zone']))
 	<th>Date :</th><td>$date</td>
 	</tr>
 	</table>
-	
+
 	";
 }
 
@@ -153,7 +153,7 @@ if(isset($_POST['pilih_zone']))
 
 ?>
 <br><br><br><rb>
-<font color="white">Created by Afif Zafri</font>
+<font>Created by Afif Zafri</font>
 </center>
 </body>
 </html>
