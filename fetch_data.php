@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_GET['kawasan']) && !empty($_POST['get_option'])) {
+if(!empty($_POST['get_option'])) {
 
 	$json = json_decode(file_get_contents("zon.json"), true);
 	$html = "";
