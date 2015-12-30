@@ -10,4 +10,5 @@ if(!empty($_POST['get_option'])) {
 	}
 
 	echo $html;
+}
 ?>
