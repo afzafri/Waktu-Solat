@@ -77,7 +77,7 @@ table, th, td {
 
 <?php
 
-if(isset($_POST['pilih_zone']))
+if(!empty($_POST['pilih_zone']))
 {
 	//dapatkan pilihan zone
 	$option = $_POST['pilih_zone'];
