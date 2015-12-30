@@ -2,11 +2,11 @@
 
 Display Waktu Solat for all countries in Malaysia
 
-1. Created By : 
-  --Afif Zafri (1st version)
-  --Mohd Shahril (MAJOR CODE IMPROVEMENT)
-2. Date : 30/12/2015
-3. Contact Me : http://fb.me/afzafri
+## Created By : 
+1. Afif Zafri (1st version)
+2. Mohd Shahril (MAJOR CODE IMPROVEMENT)
+3. Date : 30/12/2015
+4. Contact Me : http://fb.me/afzafri
 
 ## Installation
 
