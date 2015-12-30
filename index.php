@@ -84,66 +84,30 @@ if(!empty($_POST['pilih_zone']))
 	$data = file_get_contents("http://solat.io/api/my/$option");
 
 	//decide data JSON API solat ke bentuk array, dan simpan dalam variable arr
-	$arr = json_decode($data,true);
+	$arrs = json_decode($data,true);
 
-	//access isi array, dan simpan dalam variable tersendiri
-	$waktu_imsak = $arr['waktu_imsak'];
-	$waktu_subuh = $arr['waktu_subuh'];
-	$waktu_syuruk = $arr['waktu_syuruk'];
-	$waktu_zohor = $arr['waktu_zohor'];
-	$waktu_asar = $arr['waktu_asar'];
-	$waktu_maghrib = $arr['waktu_maghrib'];
-	$waktu_isyak = $arr['waktu_isyak'];
-	$zone = $arr['zone'];
-	$date = $arr['date'];
+    echo "<table>\n";
 
-	//strtotime() akan convert nilai String ke bentuk Time, supaya dapat guna
-	//function date()
-	//function date() untuk convert 24 hour to 12 hour, dan display am/pm
-	$imsak = date('h:i', strtotime($waktu_imsak));
-	$subuh = date('h:i', strtotime($waktu_subuh));
-	$syuruk = date('h:i', strtotime($waktu_syuruk));
-	$zohor = date('h:i', strtotime($waktu_zohor));
-	$asar = date('h:i', strtotime($waktu_asar));
-	$maghrib = date('h:i', strtotime($waktu_maghrib));
-	$isyak = date('h:i', strtotime($waktu_isyak));
+    foreach($arrs as $title => $arr) {
 
-	//display mcm biasa, pakai HTML ja, nak bagi cantik pun edit sini ja.
-	//contoh, $waktu_imsak. tu variable yang ada isi array tadi.
+        $title_edit = ucwords(str_replace('waktu_', ' ', $title));
 
-	echo "
+        // check jika ada word "waktu"
+        if(stripos($title, "waktu") !== FALSE) {
+            $value = date('h:i', strtotime($arr));
+            $value .= explode(':', $arr)[0] <= 12 ? ' a.m.' : ' a.m.'; // bubuh am atau pm
+        } else {
+            $value = $arr;
+        }
 
-	<table>
-	<tr>
-	<th>Imsak :</th><td>$imsak am</td>
-	</tr>
-	<tr>
-	<th>Subuh :</th><td>$subuh am</td>
-	</tr>
-	<tr>
-	<th>Syuruk :</th><td>$syuruk am</td>
-	</tr>
-	<tr>
-	<th>Zohor :</th><td>$zohor pm</td>
-	</tr>
-	<tr>
-	<th>Asar :</th><td>$asar pm</td>
-	</tr>
-	<tr>
-	<th>Maghrib :</th><td>$maghrib pm</td>
-	</tr>
-	<tr>
-	<th>Isyak :</th><td>$isyak pm</td>
-	</tr>
-	<tr>
-	<th>Zone :</th><td>$zone</td>
-	</tr>
-	<tr>
-	<th>Date :</th><td>$date</td>
-	</tr>
-	</table>
+        echo "
+        <tr>
+    	<th>{$title_edit} :</th><td>{$value}</td>
+    	</tr>
+    	<tr>";
+    }
 
-	";
+    echo "</table>";
 }
 
 
