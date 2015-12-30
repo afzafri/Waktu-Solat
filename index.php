@@ -153,7 +153,7 @@ if(isset($_POST['pilih_zone']))
 
 ?>
 <br><br><br><rb>
-<font color="white">Created by Afif Zafri</font>
+<font>Created by Afif Zafri</font>
 </center>
 </body>
 </html>
