@@ -1,6 +1,6 @@
 # Waktu-Solat
 
-Display Waktu Solat for all countries in Malaysia
+Display Waktu Solat for all states in Malaysia
 
 ## Created By : 
 1. Afif Zafri (1st version)
@@ -11,7 +11,7 @@ Display Waktu Solat for all countries in Malaysia
 ## Installation
 
 Drop all files into your server  
-Open updatezon.php once to update your zon.json to latest version
+Open updatezone.php once to update your zone.json to latest version
 
 ## Usage
 
